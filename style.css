@@ -1,0 +1,129 @@
+/* Estilos globales  ------------------------------------------------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Sansita:wght@400;700;800&display=swap');
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+:root {
+    --primary: #57884a;
+    --white: #D9D9D9;
+    --grey: #3E3E3E;
+    --brown: #836B47;
+    --lime: #CCD49F;
+    --yellow: #DFD2A1;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--white);
+    height: 100%;
+    position: relative;
+    text-align: center;
+    margin: 0;
+
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Estilos globales - Barra de navegacion*/
+
+header{
+    min-width: 100vw;
+    position: relative;
+    height: auto;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--primary);
+    height: 100px;
+}
+
+.listaNav{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    background-color: var(--primary);
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav ul{
+    text-decoration: none;
+}
+
+nav a{
+    text-decoration: none;
+    width: 30px;
+    color: var(--white);
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: Inter;
+}
+
+nav a:hover{
+    color:rgb(161, 183, 161);
+}
+
+.logoHeader{
+    height: 100px;
+    width: 165px;
+    border-radius: 30px;
+}
+
+
+.logoEcoFooter{
+    height:  100%;
+    width: 200px;
+    border-radius: 30px;
+}
+
+.logoFooter{
+    height: 50px;
+    width: 50px;
+}
+
+/* Estilos globales - Footer*/
+footer{
+    display: block;
+    background-color: var(--white);
+    color: var(--grey);
+    text-align: center;
+    border-style: none;
+    position: fixed;
+
+    bottom: 0;
+    width: 100vw;
+    height: 80px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer a{
+    width: 30px;
+    color: var(--grey);
+    font-weight: bolder;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    font-family: Calibri, sans-serif;
+    font-weight: bolder
+}
+
+.divPiePagina{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+@media (min-width:601px){
+   
+}
