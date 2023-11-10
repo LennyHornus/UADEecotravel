@@ -21,23 +21,79 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--white);
     height: 100%;
-    position: relative;
     text-align: center;
     margin: 0;
     min-height: 100vh;
-    position: relative;
+    position: relative; /* fixed me soluciona el scroll horizontal*/
 }
 
-/* Estilos globales - Barra de navegacion*/
+/* Estilos globales - Header*/
 
 header{
     min-width: 100vw;
     position: relative;
-    height: auto;
     font-family: 'Inter', sans-serif;
     background-color: var(--primary);
     height: 100px;
 }
+
+/*.listaNav{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    background-color: var(--primary);
+    align-items: center;
+    justify-content: space-around;
+}
+sacar la clase de todos los header
+*/
+
+.navbar-nav{
+    gap: 120px;
+    margin-left: 120px;
+    width: 100%;
+    font-size: 20px;
+}
+
+.logoHeader{
+    height: 70px;
+    width: 125px;
+    border-radius: 30px;
+}
+
+/* Estilos globales - Footer*/
+footer{
+    background-color: var(--grey);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    position:absolute;
+}
+
+footer ul{
+    list-style: none;
+    width: 70%;
+    margin-top: 15px;
+}
+
+.piePagina{
+    margin-right: 50px;
+}
+
+.logoUadeFooter{
+    width: 115px;
+    height: 60px;
+}
+
+.linkFooter{
+    text-decoration: none;
+}
+
+.p-font, .p-font a{
+    font-weight: 500;
+}
+
+/* Index */
 
 .mainIndex{
     background-image: url("./assets/fondo-desk-5.jpg");
@@ -47,114 +103,61 @@ header{
     
 }
 
+/*Destino*/
+
+.carousel-container {
+    width: 600px;
+    margin: auto;
+    margin-top: 20px;
+    max-height:400px;
+    background-color: #5D8B5D;
+}
+
+.textoCarrusel {
+    background-color: #3E3D3D;
+}
+
+.card{
+    margin: 20px;
+}
+
+.card-body{
+    background-color:#EBEBEB;
+}
+
+.card-group{
+    width: 60vw;
+    margin: auto;
+}
+
+.botonsito{
+    background-color: #5D8B5D;
+    padding: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 4px;
+
+}
+
+.tx a{
+    color: #EBEBEB;
+    text-decoration: none;
+}
+
+/*Nosotros*/
+
+
+/* Ustedes */
+
 .mainUstedes{
     width: 100vw;
     height: 80vh;
     background-color: var(--lime);
 }
 
-.listaNav{
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
-    background-color: var(--primary);
-    align-items: center;
-    justify-content: space-around;
-}
-
-nav ul{
-    text-decoration: none;
-    list-style: none;
-}
-
-.navbar-nav{
-    gap: 120px;
-    margin-left: 120px;
-    width: 100%;
-    font-size: 20px;
-}
-
-nav a{
-    text-decoration: none;
-    color: var(--white);
-    font-size: 25px;
-    font-weight: bolder;
-    font-family: Inter;
-}
-
-nav a:hover{
-    color:rgb(161, 183, 161);
-}
-
-.logoHeader{
-    height: 70px;
-    width: 125px;
-    border-radius: 30px;
-}
 
 
-.logoEcoFooter{
-    height: 68px;
-    width: 150px;
-    border-radius: 30px;
-    margin-top: 10px;
-}
-
-.logoUadeFooter{
-    margin-top: 10px;
-    width: 90px;
-    height: 60px;
-    border-radius: 50%;
-}
-
-.logoFooter{
-    height: 40px;
-    width: 40px;
-}
-
-/* Estilos globales - Footer*/
-footer{
-    background-color: var(--grey);
-    color: var(--grey);
-    text-align: center;
-    border-style: none;
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-footer a{
-    width: 30px;
-    color: var(--grey);
-    font-weight: bolder;
-}
-
-.linkGrupal{
-    text-decoration: none;
-}
-
-footer ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content:flex-start;
-    align-items: center;
-    width: 100%;
-    font-family: Calibri, sans-serif;
-    font-weight: bolder;
-    /*margin-right: 60px;*/
-    margin-top: 15px;
-}
-
-.divPiePagina{
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-    margin-left: 68%;
-}
+/* Media Querie */
 
 @media (max-width:601px){
 
