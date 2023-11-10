@@ -41,6 +41,7 @@ header{
 
 .mainIndex{
     background-image: url("./assets/fondo-desk-5.jpg");
+    background-repeat: round;
     width: 100vw;
     height: 80vh;
     
@@ -100,8 +101,9 @@ nav a:hover{
 }
 
 .logoUadeFooter{
-    width: 63px;
-    height: 58px;
+    margin-top: 10px;
+    width: 90px;
+    height: 60px;
     border-radius: 50%;
 }
 
@@ -112,7 +114,6 @@ nav a:hover{
 
 /* Estilos globales - Footer*/
 footer{
-    display: block;
     background-color: var(--grey);
     color: var(--grey);
     text-align: center;
@@ -120,7 +121,6 @@ footer{
     position: fixed;
     bottom: 0;
     width: 100vw;
-    height: 70px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -130,6 +130,10 @@ footer a{
     width: 30px;
     color: var(--grey);
     font-weight: bolder;
+}
+
+.linkGrupal{
+    text-decoration: none;
 }
 
 footer ul {
@@ -152,6 +156,17 @@ footer ul {
     margin-left: 68%;
 }
 
-@media (min-width:601px){
-   
+@media (max-width:601px){
+
+    .footer{
+        height: 80px;
+    }
+
+    .mainIndex{
+        background-image: url("./assets/FondoInicio.jpg");
+    }
+
+    .navbar-nav{
+        gap: 20px;
+    }
 }
