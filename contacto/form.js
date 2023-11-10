@@ -59,7 +59,7 @@ formularioSignUp.addEventListener("submit", function(event) {
             input: "telefonoVacio",
             mensaje: "Este campo es obligatorio"
         })
-    }else if(!Number(inputTelefono.value)) {
+    }else if(isNaN(inputTelefono.value)) {
         errores.push({
             input: "telefonoNoValido",
             mensaje: "Solo puede ingresar numeros"
