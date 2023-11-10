@@ -44,6 +44,7 @@ header{
     background-color: var(--primary);
     align-items: center;
     justify-content: space-around;
+    z-index: 100;
 }
 
 .navbar-nav{
@@ -246,5 +247,10 @@ footer ul{
 
     .navbar-nav{
         gap: 20px;
+    }
+
+    .mainIndex{
+        background-repeat: no-repeat;
+        background-position: center;
     }
 }
