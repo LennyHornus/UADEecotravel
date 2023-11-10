@@ -118,8 +118,12 @@ footer ul{
 }
 
 .textoCarrusel {
-    background-color: #3E3D3D;
+    background-color: rgba(62, 61, 61, 0.7); /* Ajusta el valor de opacidad según tus preferencias */
+    color: white; /* Ajusta el color del texto según tus preferencias */
+    padding: 10px; /* Ajusta el relleno según tus preferencias */
+    
 }
+
 
 .card{
     margin: 20px;
@@ -143,6 +147,13 @@ footer ul{
 
 }
 
+.card-text {
+    margin-bottom: 1em;
+}
+
+.card-title{
+    font-weight: 700;
+}
 .tx a{
     color: #EBEBEB;
     text-decoration: none;
@@ -231,6 +242,8 @@ footer ul{
     width: 100vw;
     height: 100vh;
 }
+
+
 
 
 /* Media Querie */
