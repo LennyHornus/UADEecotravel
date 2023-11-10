@@ -37,7 +37,7 @@ header{
     height: 100px;
 }
 
-/*.listaNav{
+.listaNav{
     display: flex;
     flex-direction: row;
     padding: 10px;
@@ -45,8 +45,6 @@ header{
     align-items: center;
     justify-content: space-around;
 }
-sacar la clase de todos los header
-*/
 
 .navbar-nav{
     gap: 120px;
@@ -99,11 +97,16 @@ footer ul{
     background-image: url("./assets/fondo-desk-5.jpg");
     background-repeat: round;
     width: 100vw;
-    height: 80vh;
+    height: 90vh;
     
 }
 
 /*Destino*/
+
+.mainDestinos{
+    width: 100vw;
+    height: 130vh;
+}
 
 .carousel-container {
     width: 600px;
@@ -145,16 +148,88 @@ footer ul{
 }
 
 /*Nosotros*/
+.containerNosotros{
+    width: 100vw;
+    height: 150vh;
+    background-color: aqua;
+}
 
+.caja1{
+    background-color: var(--lime);
+    width: 100%;
+    height: 28%;
+    display: flex;
+    flex-direction: row;
+}
 
-/* Ustedes */
+.containerMisionVision{
+    padding: 30px;
+}
 
-.mainUstedes{
+.caja2{
+    background-color: #836B47;
+    width: 100%;
+    height: 28%;
+    display: flex;
+    flex-direction: row;
+}
+
+.caja3{
+    background-color: #DFD2A1;
+    width: 100%;
+    height: 44%;
+}
+
+.foto-caja1{
+    width: 550px;
+    height: 310px;
+}
+
+.h2-mision{
+    color:rgb(75, 95, 75);
+    font-weight: bold;
+}
+
+.p-mision{
+    color: rgb(75, 95, 75);
+}
+
+.h2-vision{
+    color:rgb(77, 60, 15);
+    font-weight: bold;
+}
+
+.p-vision{
+    color: rgb(77, 60, 15);
+}
+
+.containerElegirnos{
+    padding: 30px;
+    text-align: center;
+}
+.h2-elegirnos{
+    color: #5b6045;
+    font-weight: bold;
+}
+
+.p-elegirnos{
+    color: #5b6045;
+}
+
+/* Reserva */
+
+.mainReserva{
     width: 100vw;
     height: 80vh;
     background-color: var(--lime);
 }
 
+/*Contacto*/
+
+.mainContacto{
+    width: 100vw;
+    height: 100vh;
+}
 
 
 /* Media Querie */
