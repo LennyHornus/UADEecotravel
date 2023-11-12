@@ -13,7 +13,7 @@
     --white: #D9D9D9;
     --grey: #3E3D3D;
     --brown: #836B47;
-    --lime: #CCD49F;
+    --lime: #c0d49f; /*#CCD49F*/
     --yellow: #DFD2A1;
 }
 
@@ -99,31 +99,30 @@ footer ul{
     background-repeat: round;
     width: 100vw;
     height: 90vh;
-    
 }
 
 /*Destino*/
 
 .mainDestinos{
-    width: 100vw;
+    width: 100%;
     height: 130vh;
 }
 
 .carousel-container {
     width: 600px;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 60px;
     max-height:400px;
     background-color: #5D8B5D;
 }
 
 .textoCarrusel {
-    background-color: rgba(62, 61, 61, 0.7); /* Ajusta el valor de opacidad según tus preferencias */
+    /*background-color: rgba(62, 61, 61, 0.7); */ /* Ajusta el valor de opacidad según tus preferencias */
     color: white; /* Ajusta el color del texto según tus preferencias */
-    padding: 10px; /* Ajusta el relleno según tus preferencias */
-    
+    text-shadow: 3px 3px 3px #080808;
+    font-weight: bol;
+    padding-top: 30px; 
 }
-
 
 .card{
     margin: 20px;
@@ -136,6 +135,8 @@ footer ul{
 .card-group{
     width: 60vw;
     margin: auto;
+    margin-top: 40px;
+
 }
 
 .botonsito{
@@ -163,7 +164,6 @@ footer ul{
 .containerNosotros{
     width: 100vw;
     height: 150vh;
-    background-color: aqua;
 }
 
 .caja1{
@@ -176,6 +176,7 @@ footer ul{
 
 .containerMisionVision{
     padding: 30px;
+    width: 70%;
 }
 
 .caja2{
@@ -193,8 +194,8 @@ footer ul{
 }
 
 .foto-caja1{
-    width: 550px;
-    height: 310px;
+    width:100%;
+    height: 100%;
 }
 
 .h2-mision{
@@ -220,50 +221,154 @@ footer ul{
     text-align: center;
 }
 .h2-elegirnos{
-    color: #5b6045;
+    color: #6c654e;
     font-weight: bold;
 }
 
-.p-elegirnos{
-    color: #5b6045;
+.ol-elegirnos{
+    color: #6c654e;
+    text-align: justify;
+    margin-top: 30px;
+}
+.ol-elegirnos li{
+    margin: 10px;
 }
 
 /* Reserva */
 
 .mainReserva{
-    width: 100vw;
-    height: 80vh;
+    width: 100%;
+    height: 120vh;
     background-color: var(--lime);
 }
 
 /*Contacto*/
 
 .mainContacto{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
+.imgFondo{
+    width: 100%;
+    height: 50vh;
+}
 
+.formMapa{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+form{
+    background-color:var(--lime);
+    width: 500px;
+    height: 570px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -2px 2px 2px  gray;
+}
+
+.form-header h2{
+    margin-top: 20px;
+    font-weight: bold; 
+    /*text-shadow: 2px 2px 3px var(--white);*/
+    color: var(--primary);
+}
+
+form button{
+    width: 80%;
+    height: 35px;
+    margin-left: 50px;
+    background-color:var(--primary);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    margin-top: -20px;
+    box-shadow: -2px 2px 2px #416141;
+}
+form label input{
+    width: 80%;
+    height: 35px;
+    padding: 10px;
+    border: none;
+    box-shadow: -2px 2px 2px  #747373;
+}
+
+form label input:focus{
+    outline: none;
+}
+
+form small{
+    color:rgb(193, 39, 39);
+    margin-top: 1px;
+    padding-top: 1px
+}
+
+.mapa{
+    width: 700px;
+    height: 570px;
+}
+
+#mensaje{
+    height: 120px;
+    padding-bottom: 93px;
+}
 
 
 /* Media Querie */
 
 @media (max-width:601px){
-
+    /*Header responsive*/
+    .navbar-nav{
+        gap: 20px;
+        text-align: center;
+        margin-left: 0px;
+        
+    }
+    /*Footer responsive*/
     .footer{
         height: 80px;
     }
-
+    /*Index responsive*/
     .mainIndex{
-        background-image: url("./assets/FondoInicio.jpg");
-    }
-
-    .navbar-nav{
-        gap: 20px;
-    }
-
-    .mainIndex{
+        background-image: url("./assets/fondoInicio-1.jpg");
+        height: 110vh;
         background-repeat: no-repeat;
         background-position: center;
+    }
+    /*Destino responsive*/
+    .mainDestino{
+        height: 300vh;
+    }
+    /*Nosotros responsive*/
+    .containerNosotros{
+        height: 100%;
+    }
+    .caja1{
+        display: flex;
+        flex-direction: column;
+    }
+    .containerMisionVision{
+        text-align: center;
+        width: 100%;
+    }
+    .caja2{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    /* Contacto responsive*/
+    .formMapa{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mapa{
+        width: 500px;
+        height: 370px;
+        margin-top: 70px
     }
 }
