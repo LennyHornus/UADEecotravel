@@ -114,6 +114,7 @@ footer ul{
     margin-top: 60px;
     max-height:400px;
     background-color: #5D8B5D;
+    margin-bottom: 40px;
 }
 
 .textoCarrusel {
@@ -125,19 +126,15 @@ footer ul{
 }
 
 .card{
-    margin: 20px;
+   margin: 20px;
+   
 }
 
 .card-body{
     background-color:#EBEBEB;
 }
 
-.card-group{
-    width: 60vw;
-    margin: auto;
-    margin-top: 40px;
 
-}
 
 .botonsito{
     background-color: #5D8B5D;
@@ -154,7 +151,10 @@ footer ul{
 
 .card-title{
     font-weight: 700;
+    
 }
+
+
 .tx a{
     color: #EBEBEB;
     text-decoration: none;
@@ -311,6 +311,8 @@ form small{
     width: 700px;
     height: 570px;
 }
+
+
 
 #mensaje{
     height: 120px;
