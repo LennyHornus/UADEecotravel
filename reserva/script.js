@@ -136,12 +136,47 @@ formularioReserva.addEventListener("submit", function(event) {
             }
         })
     } else {
-        // Swal.fire({
-        //     title: "Reservado!",
-        //     text: "Se genero tu reserva!",           // Se recarga la pagina y no se llega a ver
-        //     icon: "success",
-        //     confirmButtonText: 'Continuar'
-        // });
+        let destinoElegido;
+        destinos.forEach(destino => {
+            if (destino.checked) {
+                destinoElegido = destino.parentElement.textContent.trim()
+            } 
+        })
+
+        let personaElegida;
+        personas.forEach(persona => {
+            if (persona.checked) {
+                personaElegida = persona.parentElement.textContent.trim()
+            } 
+        })
+
+        let metodoPagoElegido;
+        metodoPago.forEach(pago=>{
+            if (pago.checked) {
+                metodoPagoElegido = pago.parentElement.textContent.trim()
+            }
+        })
+
+        let reserva = {
+            nombre : inputNombre.value,
+            telefono : inputTelefono.value,
+            email : inputEmail.value,
+            lugarDestino : destinoElegido,
+            personas : personaElegida,
+            metodoPago : metodoPagoElegido
+        }
+
+        const reservasCargadas = JSON.parse(localStorage.getItem('reservasCargadas')); // Traigo las reservas existentes
+        const arrayReservas = []
+
+        if (reservasCargadas) {                          // Si existen comentarios previos
+            reservasCargadas.forEach(e => {
+                arrayReservas.push(e);                   // Ademas los pusheo al arrayReservas para que al agregar una reserva, se adjunte luego de las ya existentes
+            })
+            arrayReservas.push(reserva)
+        }
+
+        localStorage.setItem('reservasCargadas', JSON.stringify(arrayReservas)) // Lo guardo en local Storage para traerlo dsp en el carrito
 
         formularioReserva.submit(); // Si no sucede ninguno de los casos anteriores, envio el formulario
     }
