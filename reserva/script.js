@@ -25,7 +25,7 @@ formularioReserva.addEventListener("submit", function(event) {
     event.preventDefault();
     let errores = [];
 
-    // Errores del nombre, telefono y Email
+    // Errores del nombre
     let inputNombreValue = inputNombre.value.trim();
 
     if(inputNombreValue === "") {
@@ -73,7 +73,7 @@ formularioReserva.addEventListener("submit", function(event) {
             totalCheckDestinos += 1; // Si la condicion checked es true, le sumo 1 punto a la variable
         }
     })
-    if (totalCheckDestinos === 0) { // Si la variable es 0, significa que no se selecciono ninguna nacionalidad, por lo que pusheo el error correspondiente
+    if (totalCheckDestinos === 0) { // Si la variable es 0, significa que no se selecciono ningun destino, por lo que pusheo el error correspondiente
         errores.push({
             input: 'destino',
             mensaje: 'Debes seleccionar un destino'
@@ -136,10 +136,11 @@ formularioReserva.addEventListener("submit", function(event) {
             }
         })
     } else {
+        // Cargo en cada variable el dato seleccionado para guardar la reserva
         let destinoElegido;
         destinos.forEach(destino => {
             if (destino.checked) {
-                destinoElegido = destino.parentElement.textContent.trim()
+                destinoElegido = destino.parentElement.textContent.trim() // Uso trim para eliminar los espacios extra
             } 
         })
 
@@ -157,6 +158,7 @@ formularioReserva.addEventListener("submit", function(event) {
             }
         })
 
+        // Creo el objeto reserva con los datos correspondientes
         let reserva = {
             nombre : inputNombre.value,
             telefono : inputTelefono.value,
@@ -169,7 +171,7 @@ formularioReserva.addEventListener("submit", function(event) {
         const reservasCargadas = JSON.parse(localStorage.getItem('reservasCargadas')); // Traigo las reservas existentes
         const arrayReservas = []
 
-        if (reservasCargadas) {                          // Si existen comentarios previos
+        if (reservasCargadas) {                          // Si existen reservas previas las uso
             reservasCargadas.forEach(e => {
                 arrayReservas.push(e);                   // Ademas los pusheo al arrayReservas para que al agregar una reserva, se adjunte luego de las ya existentes
             })
@@ -179,6 +181,7 @@ formularioReserva.addEventListener("submit", function(event) {
         localStorage.setItem('reservasCargadas', JSON.stringify(arrayReservas)) // Lo guardo en local Storage para traerlo dsp en el carrito
 
         formularioReserva.submit(); // Si no sucede ninguno de los casos anteriores, envio el formulario
+        location.reload()
     }
 
 });
