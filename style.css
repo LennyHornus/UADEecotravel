@@ -121,7 +121,6 @@ footer ul{
     box-shadow: -5px 3px 5px  gray, 5px 3px 5px gray;
 }
 
-
 .textoCarrusel {
     color: var(--white); 
     text-shadow: 3px 3px 3px #080808;
@@ -230,6 +229,7 @@ footer ul{
     padding: 30px;
     text-align: center;
 }
+
 .h2-elegirnos{
     color: #6c654e;
     font-weight: bold;
@@ -240,6 +240,7 @@ footer ul{
     text-align: justify;
     margin-top: 30px;
 }
+
 .ol-elegirnos li{
     margin: 10px;
 }
@@ -322,8 +323,6 @@ form small{
     height: 570px;
 }
 
-
-
 #mensaje{
     height: 120px;
     padding-bottom: 93px;
@@ -338,7 +337,6 @@ form small{
         gap: 20px;
         text-align: center;
         margin-left: 0px;
-        
     }
     /*Footer responsive*/
     .footer{
@@ -354,6 +352,14 @@ form small{
     /*Destino responsive*/
     .mainDestino{
         height: 300vh;
+    }
+    .carousel-container {
+        width: 90vw;
+    }
+
+    .container-cards{
+        width: 90vw;
+        margin-left: 6%;
     }
     /*Nosotros responsive*/
     .containerNosotros{
