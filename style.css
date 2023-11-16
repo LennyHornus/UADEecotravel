@@ -13,7 +13,7 @@
     --white: #D9D9D9;
     --grey: #3E3D3D;
     --brown: #836B47;
-    --lime: #c0d49f; /*#CCD49F*/
+    --lime: #c0d49f; 
     --yellow: #DFD2A1;
 }
 
@@ -24,7 +24,7 @@ body {
     text-align: center;
     margin: 0;
     min-height: 100vh;
-    position: relative; /* fixed me soluciona el scroll horizontal*/
+    position: relative;
 }
 
 /* Estilos globales - Header*/
@@ -104,66 +104,69 @@ footer ul{
 /*Destino*/
 
 .mainDestinos{
-    width: 100%;
-    height: 130vh;
-    background-color: #c0d49f;
+    width: 100vw;
+    height: 100%;
+    background-color: var(--lime);
+    display: flex;
+    flex-direction: column;
 }
 
 .carousel-container {
-    width: 600px;
+    width: 800px;
     margin: auto;
-    padding: 60px;
-    max-height:400px;
-    background-color: #c0d49f;
+    margin-top: 50px;
+    max-height:550px;
+    background-color: var(--lime);
     margin-bottom: 40px;
+    box-shadow: -5px 3px 5px  gray, 5px 3px 5px gray;
 }
 
+
 .textoCarrusel {
-    /*background-color: rgba(62, 61, 61, 0.7); */ /* Ajusta el valor de opacidad según tus preferencias */
-    color: white; /* Ajusta el color del texto según tus preferencias */
+    color: var(--white); 
     text-shadow: 3px 3px 3px #080808;
     font-weight: bol;
     padding-top: 30px; 
 }
 
-.card{
-   margin: 20px 0;
-   
-   
+.container-cards{
+    margin-top: 8%;
+}
 
+#card{
+    border: none;
+    background-color: #416141;
+}
+.card{
+    margin: 7% 0;
 }
 
 .card-body{
-    background-color:#EBEBEB
-    
+    background-color:#416141;
+    margin-top: -15px;
 }
 
-/*margin-left: -12px;
-margin-right: -12px;
-border-radius: 0 0 9px 9px;*/
 
 .botonsito{
-    background-color: #5D8B5D;
+    background-color: var(--primary);
     padding: 10px;
     padding-top: 8px;
     padding-bottom: 8px;
     border-radius: 4px;
-
 }
 
 .card-text {
     margin-bottom: 1em;
-    
+    color: var(--white);
 }
 
-.card-title{
-    font-weight: 700;
-    
+#card-titulo{
+    font-weight: 800;
+    color: #173917;
 }
-
 
 .tx a{
-    color: #EBEBEB;
+    color: var(--white);
     text-decoration: none;
 }
 
@@ -187,7 +190,7 @@ border-radius: 0 0 9px 9px;*/
 }
 
 .caja2{
-    background-color: #836B47;
+    background-color: var(--brown);
     width: 100%;
     height: 28%;
     display: flex;
@@ -195,7 +198,7 @@ border-radius: 0 0 9px 9px;*/
 }
 
 .caja3{
-    background-color: #DFD2A1;
+    background-color: var(--yellow);
     width: 100%;
     height: 44%;
 }
