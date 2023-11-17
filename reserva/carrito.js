@@ -1,4 +1,4 @@
-const reservasCargadas = JSON.parse(localStorage.getItem('reservasCargadas')); // Traigo las reservas existentes
+const reservasCargadas = JSON.parse(sessionStorage.getItem('reservasCargadas')); // Traigo las reservas existentes
 const divContainer = document.querySelector('#container') // Selecciono el div container del dom
 
 
@@ -20,14 +20,12 @@ const definirFoto = (titulo)=>{
     }
 }
 
-
-if (reservasCargadas) {                          // Si existen reservas previas las cargo en el div html con el contenido y formato correspondientes
-    reservasCargadas.forEach((reserva,i) => {              
-        console.log(definirFoto(reserva.lugarDestino));
-        console.log(reserva.lugarDestino);
+if (reservasCargadas) {
+    // Si existen reservas previas las cargo en el div html con el contenido y formato correspondientes
+    reservasCargadas.forEach((reserva,i) => {   
         divContainer.innerHTML += 
         `
-        <div class="card col-sm-4 mx-auto" style="width: 18rem;">
+        <div class="card col-sm-4 mx-auto" style="width: 18rem;" id="${i}">
             <div class="card-body tx" id="container">
                 <h5 class="card-title"> ${reserva.lugarDestino} </h5>
                 ${definirFoto(reserva.lugarDestino)}
@@ -36,10 +34,8 @@ if (reservasCargadas) {                          // Si existen reservas previas 
                 <p class="card-text">${reserva.email}</p>
                 <p class="card-text">${reserva.personas}</p>
                 <p class="card-text">${reserva.metodoPago}</p>
-                <a href="../reserva/reserva.html" class=" botonsito" id="eliminarReservaBtn" onclick='eliminarReserva()'>Eliminar Reserva</a>
             </div>
         </div>
         `             
     })
 }
-

@@ -168,17 +168,37 @@ formularioReserva.addEventListener("submit", function(event) {
             metodoPago : metodoPagoElegido
         }
 
-        const reservasCargadas = JSON.parse(localStorage.getItem('reservasCargadas')); // Traigo las reservas existentes
+        const reservasCargadas = JSON.parse(sessionStorage.getItem('reservasCargadas')); // Traigo las reservas existentes
         const arrayReservas = []
 
-        if (reservasCargadas) {                          // Si existen reservas previas las uso
+        const divContainer = document.querySelector('#container') // Selecciono el div container del dom
+        arrayReservas.push(reserva) // Pusheo la reserva creada al array
+        
+        // Renderizo la reserva recien creada
+        divContainer.innerHTML += 
+        `
+        <div class="card col-sm-4 mx-auto" style="width: 18rem;" id="0">
+            <div class="card-body tx" id="container">
+                <h5 class="card-title"> ${reserva.lugarDestino} </h5>
+                ${definirFoto(reserva.lugarDestino)}
+                <p class="card-text">${reserva.nombre}</p>
+                <p class="card-text">${reserva.telefono}</p>
+                <p class="card-text">${reserva.email}</p>
+                <p class="card-text">${reserva.personas}</p>
+                <p class="card-text">${reserva.metodoPago}</p>
+            </div>
+        </div>
+        `
+
+        // Si existen reservas previas las uso
+        if (reservasCargadas) {
             reservasCargadas.forEach(e => {
-                arrayReservas.push(e);                   // Ademas los pusheo al arrayReservas para que al agregar una reserva, se adjunte luego de las ya existentes
+                // Ademas los pusheo al arrayReservas para que al agregar una reserva, se guarde con las demas
+                arrayReservas.push(e);    
             })
-            arrayReservas.push(reserva)
         }
 
-        localStorage.setItem('reservasCargadas', JSON.stringify(arrayReservas)) // Lo guardo en local Storage para traerlo dsp en el carrito
+        sessionStorage.setItem('reservasCargadas', JSON.stringify(arrayReservas)) // Lo guardo en session Storage para traerlo dsp en el carrito
 
         formularioReserva.submit(); // Si no sucede ninguno de los casos anteriores, envio el formulario
         location.reload()
