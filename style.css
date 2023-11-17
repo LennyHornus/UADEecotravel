@@ -298,7 +298,7 @@ footer ul{
     text-align: center;
     align-self: center;
     gap: 20px;
-    box-shadow: -2px 2px 5px  gray, 2px 2px 5px  gray; 
+    box-shadow: -1px 1px 5px  gray, 1px 1px 5px  gray; 
 }
 
 .form-reserva h1{
@@ -321,7 +321,7 @@ legend{
     color: var(--white);
     border: none;
     cursor: pointer;
-    box-shadow: -2px 2px 2px #416141;
+    box-shadow: -2px 2px 2px #416141, 2px 2px 2px #416141;
     margin-top: 25px;
     margin-bottom: 25px;
 }
@@ -332,7 +332,7 @@ legend{
     padding: 10px;
     border: none;
     margin-top: 15px;
-    box-shadow: -2px 2px 2px  #747373;
+    box-shadow: -2px 2px 5px  #747373, 2px 2px 5px  #747373;
 }
 .form-reserva label{
     color: rgb(108, 107, 107);
