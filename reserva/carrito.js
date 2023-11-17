@@ -38,4 +38,9 @@ if (reservasCargadas) {
         </div>
         `             
     })
+} else{
+    divContainer.innerHTML += 
+    `
+    <p class="carritoVacio">El carrito está vacío</p>
+    `
 }

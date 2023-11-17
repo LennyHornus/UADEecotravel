@@ -284,32 +284,12 @@ footer ul{
 .mainReserva{
     width: 100%;
     height: 100%;
-    background-color: var(--lime);
     display: flex;
     flex-direction: column;
-}
-
-.containerCarrito{
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    width: 90%;
-    margin-bottom: 50px;
-}
-
-.containerCarrito h2{
-    color: #173917;
-    font-size: 35px;
-    font-weight: bold;
-    padding-top: 30px;
-    width: 100%;
-    margin-bottom: 120px;
-    text-align: center;
 }
 
 .form-reserva{
-    background-color: rgb(80, 79, 79);
+    background-color: var(--lime);
     width: 70%;
     height: 100%;
     margin-top: 40px;
@@ -318,20 +298,19 @@ footer ul{
     text-align: center;
     align-self: center;
     gap: 20px;
+    box-shadow: -2px 2px 5px  gray, 2px 2px 5px  gray; 
 }
 
 .form-reserva h1{
-    color: rgb(42, 42, 42);
-    font-size: 30px;
+    color:var(--primary);
+    font-size: 40px;
     font-weight: bold;
     padding-top: 30px;
 }
 
 legend{
-    color: rgb(161, 159, 159);
-    font-weight: bold;
+    color: var(--primary);
     margin-top: 30px;
-
 }
 
 .form-reserva button{
@@ -356,16 +335,42 @@ legend{
     box-shadow: -2px 2px 2px  #747373;
 }
 .form-reserva label{
-    color: var(--white);
+    color: rgb(108, 107, 107);
 }
 .form-reserva label input[type="radio"]{
     width: 80px;
     height: 20px;
     margin-top: 15px;
+    
 }
 
 .form-reserva label input:focus{
     outline: none;
+}
+
+.containerCarrito{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.containerCarrito h2{
+    color: var(--primary);
+    font-size: 35px;
+    font-weight: bold;
+    padding-top: 30px;
+    width: 100%;
+    margin-bottom: 120px;
+    text-align: center;
+}
+
+.carritoVacio{
+    text-align: center;
+    color: #757373;
+    margin-left: 8px;
 }
 
 /*Contacto*/
@@ -511,6 +516,42 @@ form small{
         display: flex;
         flex-direction: column-reverse;
     }
+    /*Reserva responsive*/
+    .form-reserva{
+        width: 90%;
+    }
+
+    .form-reserva h1{
+        font-size: 30px;
+    }
+    
+    legend{
+        margin-top: 20px;
+    }
+
+    .form-reserva button{
+        margin-left: 10%;
+    }
+    
+    .form-reserva label{
+        color: rgb(108, 107, 107);
+        font-size: 15px;
+    }
+    .form-reserva label input[type="radio"]{
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .containerCarrito h2{
+        margin-bottom: 80px;
+    }
+
+    .reservas{
+        padding-left: 13%;
+    }
+    
     /* Contacto responsive*/
     .formMapa{
         display: flex;
