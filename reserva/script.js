@@ -177,15 +177,15 @@ formularioReserva.addEventListener("submit", function(event) {
         // Renderizo la reserva recien creada
         divContainer.innerHTML += 
         `
-        <div class="card col-sm-4 mx-auto" style="width: 18rem;" id="0">
-            <div class="card-body tx" id="container">
-                <h5 class="card-title"> ${reserva.lugarDestino} </h5>
+        <div class="card col-sm-4 mx-auto" id="card" style="width: 18rem;" id="0">
+            <div class="card-body tx my-3" id="container">
+                <h5 class="card-title" id="card-titulo"> ${reserva.lugarDestino} </h5>
                 ${definirFoto(reserva.lugarDestino)}
-                <p class="card-text">${reserva.nombre}</p>
-                <p class="card-text">${reserva.telefono}</p>
-                <p class="card-text">${reserva.email}</p>
-                <p class="card-text">${reserva.personas}</p>
-                <p class="card-text">${reserva.metodoPago}</p>
+                <p class="card-text">Nombre: ${reserva.nombre}</p>
+                <p class="card-text">Teléfono: ${reserva.telefono}</p>
+                <p class="card-text">Email: ${reserva.email}</p>
+                <p class="card-text">Personas: ${reserva.personas}</p>
+                <p class="card-text">Método de pago: ${reserva.metodoPago}</p>
             </div>
         </div>
         `

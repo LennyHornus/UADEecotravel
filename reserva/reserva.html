@@ -39,29 +39,27 @@
     </header>
 
     <main class="mainReserva">
-        <!-- destinos scroll
-        persona scroll
-        servicios multichoicce
-        forma de pago  -->
-  
-        <form id="reserva">
+        <form id="reserva" class="form-reserva">
             <h1>Reservas</h1>
             <label>
               <input type="text" id="nombre" placeholder="Nombre y Apellido">
-              <small id="errorNombre" style="color: red"></small>
+              <br>
+              <small id="errorNombre"></small>
             </label>
             <label>
-                <input type="text" id="telefono" placeholder="Telefono">
-                <small id="errorTelefono" style="color: red"></small>
-              </label>
+              <input type="text" id="telefono" placeholder="Telefono">
+              <br>
+              <small id="errorTelefono"></small>
+            </label>
             <label>
               <input type="text" id="email" placeholder="Email">
-              <small id="errorEmail" style="color: red"></small>
+              <br>
+              <small id="errorEmail"></small>
             </label>
             
-        
             <fieldset>
               <legend>Lugar de destino</legend>
+              <div class="opciones">
               <label>
                 <input type="radio" name="destino" id="destino1">
                 Lilay Suites, Bariloche.
@@ -86,7 +84,8 @@
                 <input type="radio" name="destino" id="destino6">
                 Arakur Ushuaia
               </label>
-              <small id="errorDestino" style="color: red"></small>
+              </div>
+              <small id="errorDestino"></small>
             </fieldset>
 
             <fieldset>
@@ -111,7 +110,8 @@
                 <input type="radio" name="personas" id="personas5">
                 5
               </label>
-              <small id="errorPersonas" style="color: red"></small>
+              <br>
+              <small id="errorPersonas"></small>
             </fieldset>
         
             <fieldset>
@@ -136,17 +136,19 @@
                 <input type="radio" name="metodoPago" id="metodoPago5">
                 Mercado Pago
               </label>
-              <small id="errorMetodoPago" style="color: red"></small>
+              <br>
+              <small id="errorMetodoPago"></small>
             </fieldset>
 
             <button type="submit">Reservar</button>
-        
-          </form>
+        </form>
 
+        <div class="containerCarrito">
           <h2>Carrito</h2>
-          <div class="row container-cards reservas" id="container">
-                
-          </div>       
+          <div class="row container-cards reservas"  id="container">
+            
+          </div>
+        </div>
 
     </main>
 

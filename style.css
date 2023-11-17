@@ -283,8 +283,89 @@ footer ul{
 
 .mainReserva{
     width: 100%;
-    height: 120vh;
+    height: 100%;
     background-color: var(--lime);
+    display: flex;
+    flex-direction: column;
+}
+
+.containerCarrito{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 90%;
+    margin-bottom: 50px;
+}
+
+.containerCarrito h2{
+    color: #173917;
+    font-size: 35px;
+    font-weight: bold;
+    padding-top: 30px;
+    width: 100%;
+    margin-bottom: 120px;
+    text-align: center;
+}
+
+.form-reserva{
+    background-color: rgb(80, 79, 79);
+    width: 70%;
+    height: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-self: center;
+    gap: 20px;
+}
+
+.form-reserva h1{
+    color: rgb(42, 42, 42);
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 30px;
+}
+
+legend{
+    color: rgb(161, 159, 159);
+    font-weight: bold;
+    margin-top: 30px;
+
+}
+
+.form-reserva button{
+    width: 80%;
+    height: 35px;
+    margin-left: 100px;
+    background-color:var(--primary);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    box-shadow: -2px 2px 2px #416141;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.form-reserva label input[type="text"]{
+    width: 80%;
+    height: 35px;
+    padding: 10px;
+    border: none;
+    margin-top: 15px;
+    box-shadow: -2px 2px 2px  #747373;
+}
+.form-reserva label{
+    color: var(--white);
+}
+.form-reserva label input[type="radio"]{
+    width: 80px;
+    height: 20px;
+    margin-top: 15px;
+}
+
+.form-reserva label input:focus{
+    outline: none;
 }
 
 /*Contacto*/
@@ -306,7 +387,7 @@ footer ul{
     flex-direction: row;
     justify-content:space-around;
 }
-form{
+.form-contacto{
     background-color:var(--lime);
     width: 500px;
     height: 570px;
@@ -323,7 +404,7 @@ form{
     color: var(--primary);
 }
 
-form button{
+.form-contacto button{
     width: 80%;
     height: 35px;
     margin-left: 50px;
@@ -331,25 +412,25 @@ form button{
     color: var(--white);
     border: none;
     cursor: pointer;
-    margin-top: -20px;
     box-shadow: -2px 2px 2px #416141;
+    
 }
-form label input{
+.form-contacto label input{
     width: 80%;
     height: 35px;
     padding: 10px;
     border: none;
+    margin-top: 15px;
     box-shadow: -2px 2px 2px  #747373;
 }
 
-form label input:focus{
+.form-contacto label input:focus{
     outline: none;
 }
 
 form small{
     color:rgb(193, 39, 39);
     margin-top: 1px;
-    padding-top: 1px
 }
 
 .mapa{
