@@ -14,7 +14,7 @@
     --grey: #3E3D3D;
     --brown: #836B47;
     --lime: #c0d49f; 
-    --yellow: #DFD2A1;
+    --yellow: #d8ceaa;
 }
 
 body {
@@ -101,6 +101,33 @@ footer ul{
     height: 90vh;
 }
 
+.containerIndex{
+    display: flex;
+    flex-direction: column;
+}
+
+.bloqueIndex{
+    background-color: #3938389d;
+    width: 500px;
+    height: 160px;
+    margin-left: 12%;
+    margin-top: 5%;
+    border-radius: 10px;
+    padding: 20px;
+    color: rgb(235, 225, 225);
+}
+
+.bloqueIndex-2{
+    background-color: #3938389d;
+    width: 500px;
+    height: 180px;
+    margin-left: 56%;
+    margin-top: 6%;
+    border-radius: 10px;
+    padding: 20px;
+    color: rgb(235, 225, 225);
+}
+
 /*Destino*/
 
 .mainDestinos{
@@ -135,7 +162,9 @@ footer ul{
 #card{
     border: none;
     background-color: #416141;
+    position: relative;
 }
+
 .card{
     margin: 7% 0;
 }
@@ -145,13 +174,18 @@ footer ul{
     margin-top: -15px;
 }
 
-
 .botonsito{
     background-color: var(--primary);
     padding: 10px;
     padding-top: 8px;
     padding-bottom: 8px;
     border-radius: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 1;
+    right: 7;
+    margin-top: 20px;
+    margin-bottom: 12px;
 }
 
 .card-text {
@@ -348,6 +382,25 @@ form small{
         height: 110vh;
         background-repeat: no-repeat;
         background-position: center;
+    }
+
+    .bloqueIndex{
+        width: 370px;
+        height: 160px;
+        margin-left: 2%;
+        margin-top: 15%;
+        border-radius: 10px;
+        padding: 20px;
+        font-size: 14px;
+    }
+    .bloqueIndex-2{
+        width: 400px;
+        height: 180px;
+        margin-left: 28%;
+        margin-top: 50%;
+        border-radius: 10px;
+        padding: 20px;
+        font-size: 14px;
     }
     /*Destino responsive*/
     .mainDestino{
